@@ -1,0 +1,384 @@
+/*Fonts: 
+
+    font-family: "Yellowtail", cursive;
+    font-weight: 400;
+    font-style: normal; 
+
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;*/
+
+/*===GENERALITIES===*/
+body {
+    margin: 0;
+    padding: 0;
+    background: #fdb020;
+}
+
+a{
+    text-decoration: none;
+    color:#ff3863;
+}
+
+/*===HEADER===*/
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: #ff3863;
+    background: #fff9aa;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#header nav ul {
+    list-style-type: none;
+}
+
+#header nav ul li {
+    display: inline-block;
+    margin-right: 5rem;
+}
+
+#header nav ul li a {
+    text-decoration: none;
+    color: #fdb020;
+    padding: 0.5rem 1rem;
+}
+
+#header nav ul li a:hover {
+    color: #ff3863;
+}
+
+/*===HOME===*/
+#home{
+    background-color: #fff9aa;
+    display: flex;
+}
+
+#container-home-left{
+    flex: 1;
+}
+
+#container-home-left img{
+    height: 500px;
+}
+
+#container-home-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-home-right h1{
+    margin: 0;
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-size: 70px;
+    color:#ff3863;
+}
+
+#container-home-right p{
+    max-width: 400px;
+    margin: 0;
+    font-size: 20px;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: #fdb020;
+}
+
+
+/*===ABOUT===*/
+
+/*general*/
+#about{
+    background-color: #fdb020;
+}
+
+#container-about{
+    display: flex;
+}
+
+/*left information*/
+#left{
+    padding: 20px;
+    flex: 1;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#left h2{
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    color: #fff9aa;
+    font-size: 50px;
+}
+
+#left p{
+    font-size: 20px;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: #fff9aa;
+    display: inline-block;
+}
+
+#left p a{
+    color: #fff9aa;
+    position: relative;
+    text-decoration: none;
+}
+
+#left p a:hover{
+    color:#004EC3;
+}
+/*right my icon image*/
+#right img{
+    width: 800px;
+}
+
+#right{
+    flex: 1.40;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+/*About me page */
+
+#aboutme{
+    background-color: #fff9aa;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+#aboutme h1{
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    color:#ff3863;
+    text-align: center;
+
+}
+#aboutme p{
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    max-width: 80%;
+    color: #fdb020;
+    text-align: left;
+    margin-left: 200px;
+}
+#aboutme p a{
+    color: #fdb020;
+}
+#aboutme p a:hover{
+    color:#ff3863;
+}
+
+
+#aboutme footer{
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fdb020;
+    padding: 0;
+}
+
+/*===PROJECTS===*/
+
+/*general*/
+#projects{
+    background-color: #fff9aa;
+    display: flex;
+}
+
+/*title*/
+#container-title{
+    flex: 1;
+}
+
+#container-title h2{
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    color: #004EC3;
+    font-size: 50px;
+    margin: 20px;
+}
+
+/*images*/
+#container-projects-img{
+    flex: 0.50;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.image-project{
+    width: 200px;
+    margin-bottom: 2rem;
+    
+}
+
+/*details*/
+#container-projects-details{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-left: 20px;
+    margin-top: 7rem;
+}
+.project-title{
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    color:#ff3863;
+    padding-left: 10px;
+}
+
+.project-title a:hover{
+    color:#004EC3;
+}
+
+.project-description{
+    max-width: 500px;
+    margin: 0;
+    font-size: 20px;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: #004ec3;
+}
+
+.project-details{
+    margin-bottom: 3rem;
+    border-left: #ff3863 solid 2px;
+}
+
+
+/*===CONTACT===*/
+
+#contact h2 {
+    text-align: center;
+    color: #fff9aa; 
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+#container-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    max-width: 700px;
+    background-color: #fdb020;
+}
+
+#form-personal-information {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff9aa;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#name, #email{
+    width: 320px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 0;
+    background-color: #fff9aa;
+    border-radius: 6px;
+}
+
+.form-group textarea {
+    height: 100px;
+    width: 670px;
+    resize:none;
+    overflow-y: auto;
+}
+form input[type="submit"] {
+    width: 690px;
+    background-color: #004EC3; 
+    color: #fff9aa;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #02337e; 
+}
+
+/*===FOOTER===*/
+
+
+footer {
+    background-color: #fff9aa;
+    color: #ff3863;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+footer a {
+    color: #ff3863;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+footer a:hover {
+    color:#004EC3
+}
