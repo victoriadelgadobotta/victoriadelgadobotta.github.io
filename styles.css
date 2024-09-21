@@ -1,5 +1,4 @@
 /*Fonts: 
-
     font-family: "Yellowtail", cursive;
     font-weight: 400;
     font-style: normal; 
@@ -11,13 +10,19 @@
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
-    font-style: normal;*/
+    font-style: normal;
+    
+    
+    Recomendaciones: usar REM Y PORCENTAJES */
+
 
 /*===GENERALITIES===*/
+
 body {
     margin: 0;
     padding: 0;
     background: #fdb020;
+    font-size: 1rem;
 }
 
 a{
@@ -36,7 +41,7 @@ a{
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 #header nav ul {
@@ -49,7 +54,6 @@ a{
 }
 
 #header nav ul li a {
-    text-decoration: none;
     color: #fdb020;
     padding: 0.5rem 1rem;
 }
@@ -66,10 +70,12 @@ a{
 
 #container-home-left{
     flex: 1;
+    border: red 2px solid;
 }
 
 #container-home-left img{
-    height: 500px;
+    width:  100%;
+    border: black 2px solid;
 }
 
 #container-home-right{
@@ -78,24 +84,29 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: red 2px solid;
 }
 
 #container-home-right h1{
     margin: 0;
     font-family: "Fjalla One", sans-serif;
     font-weight: 400;
-    font-size: 70px;
+    font-size: 4.5rem;
     color:#ff3863;
+    border: black 2px solid;
+
 }
 
 #container-home-right p{
     max-width: 400px;
     margin: 0;
-    font-size: 20px;
+    font-size:  1.2rem;
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     color: #fdb020;
+    border: black 2px solid;
+
 }
 
 
@@ -106,29 +117,30 @@ a{
     background-color: #fdb020;
 }
 
-#container-about{
+#about #container-about{
     display: flex;
 }
 
 /*left information*/
-#left{
-    padding: 20px;
+#about #container-about #left{
+    padding: 1rem;
     flex: 1;
-    left: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: red 2px solid;
+
 }
 
-#left h2{
+#about #container-about #left h2{
     font-family: "Fjalla One", sans-serif;
     font-weight: 400;
     color: #fff9aa;
-    font-size: 50px;
+    font-size: 3.5rem;
 }
 
 #left p{
-    font-size: 20px;
+    font-size: 1.2rem;
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -147,7 +159,7 @@ a{
 }
 /*right my icon image*/
 #right img{
-    width: 800px;
+    width: 100%;
 }
 
 #right{
@@ -157,50 +169,6 @@ a{
     align-items: end;
 }
 
-/*About me page */
-
-#aboutme{
-    background-color: #fff9aa;
-    display: flex;
-    align-items: center;
-    align-content: center;
-}
-#aboutme h1{
-    font-family: "Fjalla One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 70px;
-    color:#ff3863;
-    text-align: center;
-
-}
-#aboutme p{
-    font-family: "Source Sans 3", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 25px;
-    max-width: 80%;
-    color: #fdb020;
-    text-align: left;
-    margin-left: 200px;
-}
-#aboutme p a{
-    color: #fdb020;
-}
-#aboutme p a:hover{
-    color:#ff3863;
-}
-
-
-#aboutme footer{
-    font-family: "Source Sans 3", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-size: 20px;
-    color: #fdb020;
-    padding: 0;
-}
 
 /*===PROJECTS===*/
 
@@ -219,8 +187,8 @@ a{
     font-family: "Fjalla One", sans-serif;
     font-weight: 400;
     color: #004EC3;
-    font-size: 50px;
-    margin: 20px;
+    font-size: 3.5rem;
+    margin: 1rem;
 }
 
 /*images*/
@@ -228,12 +196,12 @@ a{
     flex: 0.50;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 8rem;
 }
+
 .image-project{
-    width: 200px;
-    margin-bottom: 2rem;
-    
+    width: 100%;
+    margin-bottom: 3rem;
 }
 
 /*details*/
@@ -242,16 +210,16 @@ a{
     display: flex;
     flex-direction: column;
     text-align: start;
-    margin-left: 20px;
+    margin-left: 1rem;
     margin-top: 7rem;
 }
 .project-title{
     font-family: "Fjalla One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 35px;
+    font-size: 2.5rem;
     color:#ff3863;
-    padding-left: 10px;
+    padding-left: 1rem;
 }
 
 .project-title a:hover{
@@ -259,9 +227,9 @@ a{
 }
 
 .project-description{
-    max-width: 500px;
+    max-width: 100%; 
     margin: 0;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -281,80 +249,78 @@ a{
     color: #fff9aa; 
     font-family: "Fjalla One", sans-serif;
     font-weight: 400;
-    font-size: 50px;
+    font-size: 3.5rem;
 }
 
-#container-form{
+#container-form {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 }
 
 form {
-    max-width: 700px;
-    background-color: #fdb020;
+    max-width: 55rem;
+    width: 100%; 
+    background-color: transparent;
+    padding: 2rem; /* Espacio interno alrededor del formulario */
+    box-sizing: border-box;
 }
 
 #form-personal-information {
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
 }
 
 .form-group {
     flex: 1;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
+.form-group label{
     color: #fff9aa;
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 20px;
-}
-
-#name, #email{
-    width: 320px;
+    font-size: 1.2rem;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 8px;
-    border: 0;
+    padding: 0.75rem;
     background-color: #fff9aa;
     border-radius: 6px;
-}
-
-.form-group textarea {
-    height: 100px;
-    width: 670px;
-    resize:none;
-    overflow-y: auto;
-}
-form input[type="submit"] {
-    width: 690px;
-    background-color: #004EC3; 
-    color: #fff9aa;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.3s;
+    border: 0;
+    font-size: 1rem;
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 10rem;
+    resize: none;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #004EC3; 
+    color: #fff9aa;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    font-size: 1.2rem;
 }
 
 form input[type="submit"]:hover {
-    background-color: #02337e; 
+    background-color: #02337e;
 }
+
+
 
 /*===FOOTER===*/
 
@@ -362,21 +328,20 @@ form input[type="submit"]:hover {
 footer {
     background-color: #fff9aa;
     color: #ff3863;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 footer a {
     color: #ff3863;
     text-decoration: none;
-    padding: 0 10px;
+    
 }
 
 footer a:hover {
