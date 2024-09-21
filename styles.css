@@ -70,12 +70,10 @@ a{
 
 #container-home-left{
     flex: 1;
-    border: red 2px solid;
 }
 
 #container-home-left img{
     width:  100%;
-    border: black 2px solid;
 }
 
 #container-home-right{
@@ -84,7 +82,6 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: red 2px solid;
 }
 
 #container-home-right h1{
@@ -93,8 +90,6 @@ a{
     font-weight: 400;
     font-size: 4.5rem;
     color:#ff3863;
-    border: black 2px solid;
-
 }
 
 #container-home-right p{
@@ -105,8 +100,6 @@ a{
     font-optical-sizing: auto;
     font-weight: 400;
     color: #fdb020;
-    border: black 2px solid;
-
 }
 
 
@@ -128,8 +121,6 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: red 2px solid;
-
 }
 
 #about #container-about #left h2{
