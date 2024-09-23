@@ -46,6 +46,7 @@ a{
 
 #header nav ul {
     list-style-type: none;
+    display: flex;
 }
 
 #header nav ul li {
@@ -62,6 +63,10 @@ a{
     color: #ff3863;
 }
 
+.open-menu,
+.close-menu{
+    display: none;
+}
 /*===HOME===*/
 #home{
     background-color: #fff9aa;
@@ -160,7 +165,13 @@ a{
     align-items: end;
 }
 
+#small-icon-aboutme{
+    display: none;
+}
 
+#big-icon-aboutme{
+    display: block;
+}
 /*===PROJECTS===*/
 
 /*general*/
@@ -337,4 +348,131 @@ footer a {
 
 footer a:hover {
     color:#004EC3
+}
+
+/*===RESPONSIVE==*/
+@media screen and (max-width: 480px) {
+
+    /* HOME */
+    #home {
+        flex-direction: column;
+    }
+
+    #container-home-right {
+        order: 1;
+    }
+
+    #container-home-left {
+        order: 2;
+    }
+
+    #container-home-left img {
+
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    #container-home-right h1 {
+        font-size: 2.5rem;
+    }
+
+    #container-home-right p {
+        font-size: 1rem;
+        text-align: center;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    /* ABOUT*/
+
+    #about #container-about {
+        flex-direction: column;
+    }
+
+    #left h2{
+        text-align: center;
+        margin: 1rem;
+    }
+    #left  {
+        padding: 0.5rem;
+        margin: 0;
+    }
+    
+    #big-icon-aboutme{
+        display: none;
+    }
+
+    #small-icon-aboutme{
+        display: block;
+    }
+}
+    /* Projects section */
+    
+
+    /* Contact section */
+    #form-personal-information {
+        flex-direction: column;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+
+    form input[type="submit"] {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+
+@media screen and (max-width: 768px) {
+    .open-menu,
+    .close-menu {
+        display: block;
+        border: 0;
+        font-size: 2rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .open-menu{
+        color: #ff3863;
+    }
+
+    .close-menu{
+        color: #fff9aa;
+    }
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #ce3c5b;
+        padding: 1rem;
+        bottom: 0;
+        box-shadow: 0 0 0 100vmax #921f383f;
+    }
+
+    .nav-visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list{
+        flex-direction: column;
+    }
+
+    #header nav ul li a {
+        color: #fff9aa;
+    }
 }
