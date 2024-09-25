@@ -59,7 +59,7 @@ a{
     width: 100%;
     height: 3.5rem;
     color: #ff3863;
-    background: #fff9aa;
+    background: #fff9d1;
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -89,7 +89,7 @@ Para que no se vea el boton responsive mientras esta en tamaño estandar*/
 
 /*===HOME===*/
 #home-section{
-    background-color: #fff9aa;
+    background-color: #fff9d1;
     display: flex;
     margin-top: 3.5rem;
 }
@@ -147,7 +147,7 @@ en partes iguales tanto como les sea posible*/
 #container-about-left h2{
     font-family: "Fjalla One", sans-serif;
     font-weight: 400;
-    color: #fff9aa;
+    color: #fff9d1;
     font-size: 3.5rem;
 }
 #container-about-left p{
@@ -155,11 +155,11 @@ en partes iguales tanto como les sea posible*/
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    color: #fff9aa;
+    color: #fff9d1;
     display: inline-block;
 }
 #container-about-left p a{
-    color: #fff9aa;
+    color: #fff9d1;
     text-decoration: none;
 }
 #container-about-left p a:hover{
@@ -185,7 +185,7 @@ en partes iguales tanto como les sea posible*/
 
 /*general*/
 #project-section{
-    background-color: #fff9aa;
+    background-color: #fff9d1;
     display: flex;
     flex-direction: column;
 }
@@ -263,7 +263,7 @@ en partes iguales tanto como les sea posible*/
 
 #contact-section h2 {
     text-align: center;
-    color: #fff9aa; 
+    color: #fff9d1; 
     font-family: "Fjalla One", sans-serif;
     font-weight: 400;
     font-size: 3.5rem;
@@ -295,7 +295,7 @@ form {
 }
 
 .form-group label{
-    color: #fff9aa;
+    color: #fff9d1;
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -306,7 +306,7 @@ form {
 .form-group textarea {
     width: 100%;
     padding: 0.75rem;
-    background-color: #fff9aa;
+    background-color: #fff9d1;
     border-radius: 6px;
     border: 0;
     font-size: 1rem;
@@ -325,7 +325,7 @@ form input[type="submit"] {
     width: 100%;
     padding: 0.75rem;
     background-color: #004EC3; 
-    color: #fff9aa;
+    color: #fff9d1;
     border: none;
     cursor: pointer;
     border-radius: 6px;
@@ -343,7 +343,7 @@ form input[type="submit"]:hover {
 
 
 footer {
-    background-color: #fff9aa;
+    background-color: #fff9d1;
     color: #ff3863;
     padding: 0.5rem;
     display: flex;
@@ -386,7 +386,7 @@ Revisar tamaños de textos en contexto a distintos tamaños de pantallas*/
     }
 
     .close-menu{
-        color: #fff9aa;
+        color: #fff9d1;
     }
     .nav {
         opacity: 0;
@@ -415,7 +415,7 @@ Revisar tamaños de textos en contexto a distintos tamaños de pantallas*/
     }
 
     #header nav ul li a {
-        color: #fff9aa;
+        color: #fff9d1;
     }
 
     #header nav ul li a:hover {
