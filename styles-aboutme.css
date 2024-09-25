@@ -1,10 +1,10 @@
 
 body{
-    background-color: #fff9aa;
+    background-color: #fff9d1;
 }
 
 #aboutme{
-    background-color: #fff9aa;
+    background-color: #fff9d1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@ footer nav a:hover {
 }
 
 footer {
-    background-color: #fff9aa;
+    background-color: #fff9d1;
     color: #ff3863;
     padding: 0.5rem;
     display: flex;
