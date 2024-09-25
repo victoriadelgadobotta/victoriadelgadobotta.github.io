@@ -1,41 +1,63 @@
+/*GUIA DE COMENTARIOS:
+!!! = Algo por revisar o para mejorar
+??? = Explicacion de como funciona o para que es eso
+===SECCION=== 
+TITULO 
+Subtitulo de seccion */
 /*Fonts: 
+    --Detalles--
     font-family: "Yellowtail", cursive;
     font-weight: 400;
     font-style: normal; 
 
+    --Titulos y subtitulos--
     font-family: "Fjalla One", sans-serif;
     font-weight: 400;
     font-style: normal;
 
+    --Parrafos y generalidades--
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-    
-    
-    Recomendaciones: usar REM Y PORCENTAJES */
-
+    */
 
 /*===GENERALITIES===*/
-
+:root {
+    --font-size: 16px; 
+}
+/*??? 
+Se usa para definir variables que luego se pueden usar de referencia en el codigo,
+en este caso se usa para hacer un diseño responsive asignandole un tamaño de fuente base
+en ese tamaño de fuente inicial luego se basan todas las medidas rem: 16px = 1rem*/
+html {
+    font-size: var(--font-size);
+}
 body {
     margin: 0;
     padding: 0;
     background: #fdb020;
     font-size: 1rem;
 }
-
+h3{
+    margin: unset;
+}
+/*???
+unset se usa para tener propiedades no seteadas*/
 a{
     text-decoration: none;
     color:#ff3863;
 }
 
 /*===HEADER===*/
+
 #header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+    justify-content: end;
+    position:  fixed;
+    top: 0;
+    width: 100%;
+    height: 3.5rem;
     color: #ff3863;
     background: #fff9aa;
     font-family: "Source Sans 3", sans-serif;
@@ -43,39 +65,48 @@ a{
     font-weight: 400;
     font-size: 1.25rem;
 }
-
 #header nav ul {
     list-style-type: none;
+    display: flex;
 }
-
 #header nav ul li {
     display: inline-block;
     margin-right: 5rem;
 }
-
 #header nav ul li a {
     color: #fdb020;
     padding: 0.5rem 1rem;
 }
-
 #header nav ul li a:hover {
     color: #ff3863;
 }
+.open-menu,
+.close-menu{
+    display: none;
+}
+/*??? 
+Para que no se vea el boton responsive mientras esta en tamaño estandar*/
 
 /*===HOME===*/
-#home{
+#home-section{
     background-color: #fff9aa;
     display: flex;
+    margin-top: 3.5rem;
 }
+/*??? 
+Display flex le dice al contenedor que es flexible 
+flex: 1 equivale a flex-grow 1 flex-shrink 1 y flex-basis 0
+hace que los contenedores hijos se acomoden en el contenedor padre
+en partes iguales tanto como les sea posible*/
 
+/*Parte Izquierda*/
 #container-home-left{
     flex: 1;
 }
-
 #container-home-left img{
-    width:  100%;
+    width: 100%;
 }
-
+/*Parte Derecha*/
 #container-home-right{
     flex: 1;
     display: flex;
@@ -83,7 +114,6 @@ a{
     justify-content: center;
     align-items: center;
 }
-
 #container-home-right h1{
     margin: 0;
     font-family: "Fjalla One", sans-serif;
@@ -91,9 +121,8 @@ a{
     font-size: 4.5rem;
     color:#ff3863;
 }
-
 #container-home-right p{
-    max-width: 400px;
+    max-width: 25rem;
     margin: 0;
     font-size:  1.2rem;
     font-family: "Source Sans 3", sans-serif;
@@ -102,35 +131,26 @@ a{
     color: #fdb020;
 }
 
-
 /*===ABOUT===*/
 
 /*general*/
-#about{
+#about-section{
     background-color: #fdb020;
-}
-
-#about #container-about{
     display: flex;
-}
-
-/*left information*/
-#about #container-about #left{
-    padding: 1rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 }
-
-#about #container-about #left h2{
+/*left information*/
+#container-about-left{
+    padding: 1rem;
+    flex: 1;
+}
+#container-about-left h2{
     font-family: "Fjalla One", sans-serif;
     font-weight: 400;
     color: #fff9aa;
     font-size: 3.5rem;
 }
-
-#left p{
+#container-about-left p{
     font-size: 1.2rem;
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
@@ -138,42 +158,42 @@ a{
     color: #fff9aa;
     display: inline-block;
 }
-
-#left p a{
+#container-about-left p a{
     color: #fff9aa;
-    position: relative;
     text-decoration: none;
 }
-
-#left p a:hover{
+#container-about-left p a:hover{
     color:#004EC3;
 }
-/*right my icon image*/
-#right img{
+/*right icon*/
+#container-about-right{
+    flex: 1.40;
+}
+#container-about-right img{
     width: 100%;
 }
-
-#right{
-    flex: 1.40;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
+/*icons*/
+#small-icon-aboutme,
+#medium-icon-aboutme{
+    display: none;
 }
-
+#big-icon-aboutme{
+    display: block;
+}
 
 /*===PROJECTS===*/
 
 /*general*/
-#projects{
+#project-section{
     background-color: #fff9aa;
     display: flex;
+    flex-direction: column;
 }
-
 /*title*/
 #container-title{
     flex: 1;
+    margin-block: 5rem;
 }
-
 #container-title h2{
     font-family: "Fjalla One", sans-serif;
     font-weight: 400;
@@ -181,28 +201,38 @@ a{
     font-size: 3.5rem;
     margin: 1rem;
 }
-
-/*images*/
-#container-projects-img{
-    flex: 0.50;
-    display: flex;
-    flex-direction: column;
-    margin-top: 8rem;
-}
-
-.image-project{
-    width: 100%;
-    margin-bottom: 3rem;
-}
-
-/*details*/
-#container-projects-details{
+/*projects*/
+#container-project{
     flex: 2;
     display: flex;
     flex-direction: column;
     text-align: start;
-    margin-left: 1rem;
-    margin-top: 7rem;
+    margin-left: 30%;
+    margin-right: 15%;
+    width: 55%;
+    padding-bottom: 3rem;
+}
+.project{
+    display: flex;
+}
+/*images*/
+.project > a {
+    padding-inline: 1rem;
+    width: 20%;
+    margin-block: auto;
+}
+.project > a > img{
+    width: 100%;
+}
+.image-project{
+
+    margin-bottom: 3rem;
+}
+/*details*/
+.project-details{
+    width: 70%;
+    padding-bottom: 3rem;
+    border-left: #ff3863 solid 2px;
 }
 .project-title{
     font-family: "Fjalla One", sans-serif;
@@ -212,14 +242,13 @@ a{
     color:#ff3863;
     padding-left: 1rem;
 }
-
 .project-title a:hover{
     color:#004EC3;
 }
-
 .project-description{
-    max-width: 100%; 
+    width: 50%; 
     margin: 0;
+    padding: 1rem;
     font-size: 1.2rem;
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
@@ -227,15 +256,12 @@ a{
     color: #004ec3;
 }
 
-.project-details{
-    margin-bottom: 3rem;
-    border-left: #ff3863 solid 2px;
+#project3{
+    padding: 0;
 }
-
-
 /*===CONTACT===*/
 
-#contact h2 {
+#contact-section h2 {
     text-align: center;
     color: #fff9aa; 
     font-family: "Fjalla One", sans-serif;
@@ -337,4 +363,198 @@ footer a {
 
 footer a:hover {
     color:#004EC3
+}
+
+/*===RESPONSIVE==*/
+/*!!!
+Revisar tamaños de textos en contexto a distintos tamaños de pantallas*/
+
+/*TABLETS*/
+@media screen and (max-width: 768px) {
+    /*HEADER*/
+    .open-menu,
+    .close-menu {
+        display: block;
+        border: 0;
+        font-size: 2rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .open-menu{
+        color: #ff3863;
+    }
+
+    .close-menu{
+        color: #fff9aa;
+    }
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #ce3c5b;
+        padding: 1rem;
+        bottom: 0;
+        box-shadow: 0 0 0 100vmax #921f383f;
+    }
+
+    .nav-visible{
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+    }
+
+    .nav-list{
+        flex-direction: column;
+    }
+
+    #header nav ul li a {
+        color: #fff9aa;
+    }
+
+    #header nav ul li a:hover {
+        color: #004ec3 ;
+    }
+    /*HOME*/
+
+    #home-section{
+        padding-block: 3rem;
+    }
+    /*ABOUT*/
+
+    #container-about-right{
+        display: flex;
+        align-items: center;
+    }
+
+    #big-icon-aboutme,
+    #small-icon-aboutme{
+        display: none;
+    }
+    #medium-icon-aboutme{
+        display: block;
+    }
+
+/* PROJECTS */
+
+#container-project{
+    margin: 0;
+    width: unset;
+}
+
+.project > a {
+    width: 25%;
+}
+
+.project-description{
+    width: unset;
+    
+}
+}
+
+/*SMARTPHONES*/
+@media screen and (max-width: 480px) {
+
+    /* HOME */
+    #home-section {
+        flex-direction: column;
+    }
+    #container-home-right {
+        order: 1;
+    }
+    #container-home-left {
+        order: 2;
+    }
+    #container-home-left img {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    #container-home-right h1 {
+        font-size: 2.5rem;
+    }
+    #container-home-right p {
+        font-size: 1rem;
+        text-align: center;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    /*!!! 
+    Buscar si hay mejor altenrativa a padding y margin para que se vea bien*/
+
+    /* ABOUT*/
+    #about-section {
+        flex-direction: column;
+    }
+    #container-about-left {
+        padding: 0.5rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #container-about-left h2{
+        text-align: center;
+        margin: 1rem;
+    }
+    #big-icon-aboutme,
+    #medium-icon-aboutme{
+        display: none;
+    }
+    #small-icon-aboutme{
+        display: block;
+    }
+    /*???
+Se oculta el icono grande que pertenece a medidas de pantalla estandar
+se muestra el icono pequeño que pertenece a pantallas mas chicas tablets/smartphones*/
+    /*!!!
+    Buscar la manera de dejar el icon mas chico*/
+
+    /* PROJECTS */
+    #project-section{
+        align-items: center;
+    }
+    #container-project{
+        margin: 0;
+        width: unset;
+    }
+    .project{
+        flex-direction: column;
+        align-items: center;
+    }
+    .project > a {
+        width: 50%;
+    }
+    .project-details{
+        width: unset;
+        border-left: none;
+        text-align: center;
+    }
+    .project-description{
+        width: unset;
+        
+    }
+    /* Contact section */
+    #form-personal-information {
+        flex-direction: column;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+
+    form input[type="submit"] {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9rem;
+        text-align: center;
+    }
 }

@@ -6,30 +6,35 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/tea-favicon.png" type="image/x-icon">
     <title>Diana Delgado</title>   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Yellowtail&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Yellowtail&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <!--Header-->
     <header id="header">
-        <img src="" alt="">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <button class="open-menu" id="open"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="close-menu" id="close"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
+                <li><a href="#home-section">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#project-section">Projects</a></li>
+                <li><a href="#contact-section">Contact</a></li>
             </ul>
         </nav>
     </header>
     <!--Home-->
-    <section id="home">
+    <section id="home-section">
+        <!--Image-->
         <div id="container-home-left">
             <img src="images/teapot-and-cup.png" alt="Teapot and cup drawing">
         </div>
+        <!--Name and introduction-->
         <div id="container-home-right">
             <a href="#">
                 <h1>DIANA DELGADO</h1>
@@ -39,66 +44,70 @@
         </div>
     </section>
     <!--About me-->
-    <section id="about" >
-        <div id="container-about">
-            <!--description-->
-            <div id="left"> <!--Left-->
-                <h2>about me</h2> 
-                <p>Hello! I'm 23 years old and I'm a tea enthusiast. I've always been captivated by colors and visual composition. I have a deep love for cinema, music, writing, ceramics, and creativity. I'm constantly seeking solutions and discovering tools that help me along my journey. If you want to know how I became a web developer, you can find out <a href="about-me.html"> right here!</a>  And if you prefer to see my projects, you can check them out <a href="#projects"> right here.</a> </p>
-            </div>               
-            <!--Icon-->
-            <div id="right"> <!--Right-->
-                <a href="about-me.html">
-                    <img src="images/icon-about-me.png" alt="Icon about me Diana Delgado">
-                </a>
-            </div>
+    <section id="about-section" >
+        <!--description-->
+        <div id="container-about-left"> 
+            <h2>about me</h2> 
+            <!--small icon-->
+            <img src="images/icon-responsive.png" id="small-icon-aboutme" alt="Icon about me Diana Delgado">
+            <p>Hello! I'm 23 years old and I'm a tea enthusiast. I've always been captivated by colors and visual composition. I have a deep love for cinema, music, writing, ceramics, and creativity. I'm constantly seeking solutions and discovering tools that help me along my journey. If you want to know how I became a web developer, you can find out <a href="about-me.html"> right here!</a>  And if you prefer to see my projects, you can check them out <a href="#projects"> right here.</a> </p>
+        </div>               
+        <!--Icon-->
+        <div id="container-about-right"> 
+            <!--Big and medium icon-->
+            <a href="about-me.html">
+                <img src="images/icon-about-me.png" id="big-icon-aboutme" alt="Icon about me Diana Delgado">
+                <img src="images/icon-responsive.png" id="medium-icon-aboutme" alt="Icon about me Diana Delgado">
+            </a>
+            
         </div>
     </section>
     <!--Projects-->
-    <section id="projects" >
+    <section id="project-section" >
         <div id="container-title"> 
             <h2>my projects</h2>
         </div>
-        <div id="container-projects-img">
+        <div id="container-project">
             <!--Project 1-->
-            <a href="#">
-                <img src="images/camelliaall.png" alt="flower icon" class="image-project">
-            </a>
-            <!--Project 2-->
-            <a href="#">
-            <img src="images/camelliaall-1.png" alt="flower icon 2" class="image-project">
-            </a>
-            <!--Project 3-->
-            <a href="#">
-                <img src="images/camelliaall-2.png" alt="flower icon 3" class="image-project">
-            </a>
-        </div>
-        <div id="container-projects-details">
-            <!--Project 1-->
-            <div class="project-details">
+            <div class="project">
                 <a href="#">
-                    <h3 class="project-title">CostaLavanda Box - LandingPage</h>
+                    <img src="images/camelliaall.png" alt="flower icon" class="image-project">
                 </a>
-                <p class="project-description">A landing page showcasing CostaLavanda Box, a surprise box containing plants and garden-related items.</p>
+                <div class="project-details">
+                    <a href="#">
+                        <h3 class="project-title">CostaLavanda Box - LandingPage</h3>
+                    </a>
+                    <p class="project-description">A landing page showcasing CostaLavanda Box, a surprise box containing plants and garden-related items.</p>
+                </div>
             </div>
             <!--Project 2-->
-            <div class="project-details">
+            <div class="project">
                 <a href="#">
-                    <h3 class="project-title">Noctilumba - Ecommerce</h>
+                    <img src="images/camelliaall-1.png" alt="flower icon 2" class="image-project">
                 </a>
-                <p class="project-description">An ecommerce platform featuring the artistic works of Noctilumba, offering original drawings and artworks for sale.</p>
+                <div class="project-details">
+                    <a href="#">
+                        <h3 class="project-title">Noctilumba - Ecommerce</h3>
+                    </a>
+                    <p class="project-description">An ecommerce platform featuring the artistic works of Noctilumba, offering original drawings and artworks for sale.</p>
+                </div>
             </div>
             <!--Project 3-->
-            <div class="project-details">
+            <div class="project">
                 <a href="#">
-                    <h3 class="project-title">HabitForge - Habit Tracking Platform</h>
+                    <img src="images/camelliaall-2.png" alt="flower icon 3" class="image-project">
                 </a>
-                <p class="project-description">A platform designed to help users establish and maintain positive habits through goal setting, reminders, and progress tracking.</p>
+                <div id="project3" class="project-details">
+                    <a href="#">
+                        <h3 class="project-title">HabitForge - Habit Tracking Platform</h3>
+                    </a>
+                    <p class="project-description">A platform designed to help users establish and maintain positive habits through goal setting, reminders, and progress tracking.</p>
+                </div>
             </div>
         </div>
     </section>
     <!--Contact-->
-    <section id="contact" >
+    <section id="contact-section" >
         <h2>Let's Connect and Start Something Great!</h2>
         <div id="container-form">
             <form>
@@ -125,7 +134,11 @@
         <p>  Designed & coded by Diana Delgado  |  Images from <a href="https://es.vecteezy.com">Veectezy  |   <div> Favicon designed by <a href="https://www.flaticon.es/autores/eucalyp" title="Eucalyp"> Eucalyp </a>from <a href="https://www.flaticon.es/" title="Flaticon">Flaticon'</a></div>
         </a></p>
     </footer>
+    <script src="main.js"></script>
 </body> 
 </html>
 
+
 <!--This project was created by Diana Delgado for Jovenes a Programar. Last update: September 2024-->
+
+
