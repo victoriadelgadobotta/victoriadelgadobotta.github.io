@@ -51,13 +51,13 @@ a{
 
 /*===HEADER===*/
 
-/*!!!
- prox hacer que el header se vea siempre arriba, quede fijo (para que el enlace "home" tenga sentido) */
 #header {
     display: flex;
     justify-content: end;
-    /*position:  fixed;
-    width: 100%;*/
+    position:  fixed;
+    top: 0;
+    width: 100%;
+    height: 3.5rem;
     color: #ff3863;
     background: #fff9aa;
     font-family: "Source Sans 3", sans-serif;
@@ -91,6 +91,7 @@ Para que no se vea el boton responsive mientras esta en tamaño estandar*/
 #home-section{
     background-color: #fff9aa;
     display: flex;
+    margin-top: 3.5rem;
 }
 /*??? 
 Display flex le dice al contenedor que es flexible 
@@ -406,6 +407,7 @@ Revisar tamaños de textos en contexto a distintos tamaños de pantallas*/
     .nav-visible{
         opacity: 1;
         visibility: visible;
+        position: fixed;
     }
 
     .nav-list{
